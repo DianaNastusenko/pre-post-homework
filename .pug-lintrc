@@ -1,0 +1,22 @@
+{
+"disallowBlockExpansion": true,
+"disallowClassLiteralsBeforeIdLiterals": true,
+"disallowDuplicateAttributes": true,
+"disallowHtmlText": true,
+"disallowImplicitDiv": true,
+"disallowMultipleLineBreaks": true,
+"disallowSpacesInsideAttributeBrackets": true,
+"disallowStringConcatenation": true,
+"disallowStringInterpolation": true,
+"disallowTagInterpolation": true,
+"maximumNumberOfLines": 100,
+"requireClassLiteralsBeforeAttributes": true,
+"requireIdLiteralsBeforeAttributes": true,
+"requireLowerCaseAttributes": true,
+"requireLowerCaseTags": true,
+"requireSpaceAfterCodeOperator": true,
+"requireStrictEqualityOperators": true,
+"validateAttributeQuoteMarks": "'",
+"validateAttributeSeparator": ", ",
+"validateIndentation": 2
+}

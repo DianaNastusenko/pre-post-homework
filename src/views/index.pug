@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title npm-test
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Muli:300,300i')
+    link(rel='stylesheet', href='css/style.css')
+  body
+    .main
+      .holder
+        .img-section
+          a(href='https://www.google.com.ua/', target='_blank')
+          img(src='http://res.cloudinary.com/drlyrnwzk/image/upload/v1480954879/google-logo-97_uoolzl.png', alt='ancient logo')
+        .search-block
+          p Search the web using Google!
+          form
+            input.search-area(type='text')
+            br
+            select#results(name='dropdown')
+              option(value='10 res') 10 results
+              option(value='100 res') 100 results
+              option(value='more res') more results
+            button(type='button', value='search') Google Search
+            button(type='button', value='lucky') I'm feeling lucky
+          p
+            i Index contains ~25 million pages (soon to be much bigger)
+        .links-block
+          h2.header-link
+            a(href='#') About Google!
+          span
+            a(href='#') Stanford Search
+          span
+            a(href='#') Linux Search
+        .get-block
+          p Get Google updates monthly!
+          form
+            input(type='email', placeholder='your e-mail')
+            button(type='button', value='sub') Subscribe
+            span
+              a(href='#') Archive
+        .footer
+          p Copyright ©1997-8 Stanford University
