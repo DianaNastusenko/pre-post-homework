@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "postcss": "^5.0.21",
     "bower": "^1.8.0",
     "del": "^2.2.2",
     "del-cli": "^0.2.0",
