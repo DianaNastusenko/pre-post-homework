@@ -2,21 +2,28 @@
   "name": "project",
   "version": "1.0.0",
   "dependencies": {
+    "bower": "^1.8.0",
     "del": "^2.2.2",
     "del-cli": "^0.2.0",
+    "http-server": "^0.9.0",
     "node-sass": "^3.13.0",
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.3.0",
-    "sass-lint": "^1.10.2"
+    "sass-lint": "^1.10.2",
+    "wiredep": "^4.0.0",
+    "wiredep-cli": "^0.1.0"
   },
   "scripts": {
-    "clean": "node_modules/.bin/del-cli dest/*",
-    "lint:pug": "node_modules/.bin/pug-lint src/views",
-    "lint:sass": "node_modules/.bin/sass-lint src/styles/*.scss -v -q",
+    "postinstall": "bower install",
+    "clean": "del-cli dist/*",
+    "lint:pug": "pug-lint src/views",
+    "lint:sass": "sass-lint src/styles/*.scss -v -q",
     "lint": "npm run lint:pug && npm run lint:sass",
-    "build:html": "pug --out dest/ src/views/",
-    "build:css": "node-sass src/styles/ -o dest/css/",
-    "build": "npm run clean && npm run lint && npm run build:html && npm run build:css"
+    "build:html": "pug --out dist/ --pretty src/views/ && npm run html:wiredep",
+    "html:wiredep": "wiredep -s dist/*.html",
+    "build:css": "node-sass src/styles/ -o dist/css/",
+    "http:load": "hs dist -o http://127.0.0.1:8080/index.html",
+    "build": "npm run clean && npm run lint && npm run build:html && npm run build:css && npm run http:load"
   }
 }
