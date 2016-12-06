@@ -2,6 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "dependencies": {
+    "autoprefixer": "^6.5.3",
     "bower": "^1.8.0",
     "del": "^2.2.2",
     "del-cli": "^0.2.0",
@@ -22,8 +23,9 @@
     "lint": "npm run lint:pug && npm run lint:sass",
     "build:html": "pug --out dist/ --pretty src/views/ && npm run html:wiredep",
     "html:wiredep": "wiredep -s dist/*.html",
-    "build:css": "node-sass src/styles/ -o dist/css/",
+    "build:css": "node-sass src/styles/ -o dist/css/ && npm run build:css:autoprefixer",
     "http:load": "hs dist -o http://127.0.0.1:8080/index.html",
+    "build:css:autoprefixer":"postcss --use autoprefixer dist/css/*.css --replace",
     "build": "npm run clean && npm run lint && npm run build:html && npm run build:css && npm run http:load"
   }
 }
