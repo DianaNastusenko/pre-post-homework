@@ -1,3 +1,3 @@
-# npm-testing
-- https://yuriigr.github.io/npm-testing/
-- https://github.com/yuriigr/npm-testing/blob/gh-pages/pre-post/index.pug
+# pre-post-homework
+- `$ npm install` - use this to install all npm and bower dependencies;
+- `$ npm run build`- use this to build project and run it in browser window;
