@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center; }
+
+.holder {
+  font-family: Muli, sans-serif;
+  text-align: center; }
+
+.search-block {
+  background: #eee;
+  padding: 1% 0; }
+
+.get-block {
+  background: #eee;
+  padding: 1% 0; }
+
+.search-area {
+  width: 48%; }
+
+.header-link {
+  font-weight: 900;
+  margin: 2% 0; }
+
+.footer p {
+  font-size: 12px; }
